@@ -1,5 +1,5 @@
 /*
-Package hamming implements helpers for the DNS strand problem
+Package hamming implements helpers for the DNA strand problem
 */
 
 package hamming
