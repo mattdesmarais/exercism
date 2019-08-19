@@ -12,11 +12,12 @@ var a = [26]string{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "
 func IsIsogram(w string) bool {
 	//Array stores keeps the counts for each letter in w
 	var c = [26]int{}
-	//Process the word
+	//Process each character in the word
 	for _, v := range w {
 		//Find letter in global array "a"
 		for i, e := range a {
 			if (strings.ToUpper(string(v))) == e {
+				//Increment the value of the count array
 				c[i]++
 				break
 			}
