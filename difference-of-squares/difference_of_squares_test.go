@@ -24,7 +24,6 @@ func TestSumOfSquares(t *testing.T) {
 	}
 }
 
-
 func TestDifference(t *testing.T) {
 	for _, test := range tests {
 		want := test.sqOfSum - test.sumOfSq
@@ -33,7 +32,6 @@ func TestDifference(t *testing.T) {
 		}
 	}
 }
-
 
 // Benchmark functions on just a single number (100, from the original PE problem)
 // to avoid overhead of iterating over tests.

@@ -1,29 +1,19 @@
-//Package diffsquares implements helper functions get the difference of squares 
+//Package diffsquares implements helper functions get the difference of squares
 package diffsquares
 
-import (
-	"math"
-)
-
-func Difference (n int) int {
+//Difference returns the difference of squars
+func Difference(n int) int {
 	return SquareOfSum(n) - SumOfSquares(n)
 }
 
-//SqSum calculates the square of the sum of the first n natural numbers 
+//SquareOfSum calculates the square of the sum of the first n natural numbers
 func SquareOfSum(n int) int {
-	s := 0
-	for i := 1; i <= n; i++ {
-		s = s + i 	
-	}
-	return int(math.Pow(float64(s),2))
+	s := (n * (n + 1)) / 2
+	return int(float64(s * s))
 }
 
-//SumSq calculates the sum of the squares of the first n natural numbers 
+//SumOfSquares calculates the sum of the squares of the first n natural numbers
 func SumOfSquares(n int) int {
-//1² + 2² + ... + 10² = 385.
-	var s float64
-	for i := 1; i <= n; i++ {
-		s = s + math.Pow(float64(i),2) 	
-	}
-	return int(s)
+	s := (n * (n + 1) * ((2 * n) + 1)) / 6
+	return int(float64(s))
 }
